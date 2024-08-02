@@ -1,7 +1,8 @@
+#!/bin/bash
+
 # Check if the folder exists
 template="tree-slide"
-if [ ! -d "$template" ]
-then
+if [ ! -d "$template" ]; then
   echo "Error: Folder $template does not exist."
   echo "Make sure you are in QuartoTemplates. Process terminated."
   exit 1
@@ -9,10 +10,9 @@ else
   echo "$template exists."
 fi
 
-cd $template
+cd "$template" || exit 1
 
 # Handling flags
-
 force=0
 verbose=0
 
@@ -37,19 +37,16 @@ while getopts ":vf" opt; do
   esac
 done
 
-#  Shifts the positional parameters so that the non-option arguments are correctly assigned from `$1`.
+# Shifts the positional parameters so that the non-option arguments are correctly assigned from `$1`.
 shift $((OPTIND -1))
-
-
 
 target="../$1"
 
 echo "Target: $target"
 
-mkdir -p $target
+mkdir -p "$target"
 
 node render.js
-
 
 index0="index.qmd"
 index1="$target/$index0"
@@ -57,7 +54,6 @@ custom0="custom.scss"
 custom1="$target/$custom0"
 
 # Files to copy
-
 sources=("$index0" "$custom0")
 dests=("$index1" "$custom1")
 
@@ -73,7 +69,7 @@ for (( i=0; i<$len; i++ )); do
     target_dir=$(dirname "$file1")
     mkdir -p "$target_dir"
 
-    if [force]
+    if [ $force -eq 1 ]; then
         cp -f "$file0" "$file1"
     else
         cp "$file0" "$file1"
@@ -81,4 +77,3 @@ for (( i=0; i<$len; i++ )); do
 done
 
 echo "Files have been copied successfully."
-
