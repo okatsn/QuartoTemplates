@@ -11,14 +11,14 @@ title-slide-attributes:
 authour: # https://quarto.org/docs/authoring/front-matter.html
     - name: "{{qmd.author}}"
       affiliation: "{{qmd.affiliation}}"
-institute: "{{qmd.institute}}"
+# institute: "{{qmd.institute}}" # This attaches to the first author only
 date: {{qmd.date}}
 jupyter: julia-1.10
 # bibliography: main.bib
 format: 
     revealjs:
-        width: 1920 # increasing width and height results in a smaller relative size of font in display
-        height: 1080 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+        width: 1600 # increasing width and height results in a smaller relative size of font in display
+        height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
         theme: serif # Please referhttps://quarto.org/docs/presentations/revealjs/#themes
         # logo: Fig_logo_bar_ncu.png
         preview-links: auto # Allow preview links in presenting mode
@@ -31,5 +31,5 @@ format:
         parallax-background-horizontal: 20
         parallax-background-vertical: 20
         footer: <{{qmd.footer}}>
-
+        chalkboard: true
 ---
