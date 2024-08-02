@@ -40,12 +40,16 @@ done
 # Shifts the positional parameters so that the non-option arguments are correctly assigned from `$1`.
 shift $((OPTIND -1))
 
-target="../$1"
+
+# Target directory
+target="../../$1"
 
 echo "Target: $target"
 
 mkdir -p "$target"
 
+
+# Render and copy
 node render.js
 
 index0="index.qmd"
@@ -53,9 +57,10 @@ index1="$target/$index0"
 custom0="custom.scss"
 custom1="$target/$custom0"
 
+
 # Files to copy
-sources=("$index0" "$custom0")
-dests=("$index1" "$custom1")
+sources=("$index0" "$custom0" "background.png" ".gitignore")
+dests=("$index1" "$custom1" "$target/background.png" "$target/.gitignore")
 
 # Get the length of the files array
 len=${#sources[@]}
@@ -70,9 +75,9 @@ for (( i=0; i<$len; i++ )); do
     mkdir -p "$target_dir"
 
     if [ $force -eq 1 ]; then
-        cp -f "$file0" "$file1"
+        cp -rf "$file0" "$file1"
     else
-        cp "$file0" "$file1"
+        cp -r "$file0" "$file1"
     fi
 done
 
