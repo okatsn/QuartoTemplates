@@ -1,0 +1,35 @@
+---
+title: "{{qmd.title}}"
+execute: 
+    eval: false # by default don't evaluate cell
+    echo: true # echo source code to doc
+# subtitle: "OptionalSubtitle"
+title-slide-attributes: 
+    data-background-image: background.png # https://www.slidebackground.com/collection/natural-ppt
+    data-background-size: contain
+    data-background-opacity: "0.5"
+authour: # https://quarto.org/docs/authoring/front-matter.html
+    - name: "{{qmd.author}}"
+      affiliation: "{{qmd.affiliation}}"
+institute: "{{qmd.institute}}"
+date: {{qmd.date}}
+jupyter: julia-1.10
+# bibliography: main.bib
+format: 
+    revealjs:
+        width: 1920 # increasing width and height results in a smaller relative size of font in display
+        height: 1080 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+        theme: serif # Please referhttps://quarto.org/docs/presentations/revealjs/#themes
+        # logo: Fig_logo_bar_ncu.png
+        preview-links: auto # Allow preview links in presenting mode
+        slide-number: true
+        toc: true
+        toc-title: Outline # Title for TOC
+        toc-depth: 3
+        parallax-background-image: background.jpg
+        parallax-background-size: "1920px 1200px"
+        parallax-background-horizontal: 20
+        parallax-background-vertical: 20
+        footer: <{{qmd.footer}}>
+
+---
