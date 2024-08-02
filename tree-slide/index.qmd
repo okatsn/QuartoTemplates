@@ -11,30 +11,26 @@ title-slide-attributes:
 authour: # https://quarto.org/docs/authoring/front-matter.html
     - name: "Tsung-Hsi Wu"
       affiliation: "National Central University"
-institute: "National Central University"
+# institute: "National Central University" # This attaches to the first author only
 date: 2024-08-06
 jupyter: julia-1.10
 # bibliography: main.bib
 format: 
     revealjs:
-        width: 1920 # increasing width and height results in a smaller relative size of font in display
-        height: 1080 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
-        theme: [serif,custom.scss] # Please referhttps://quarto.org/docs/presentations/revealjs/#themes
+        width: 1600 # increasing width and height results in a smaller relative size of font in display
+        height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+        theme: [serif,custom.scss] # Please refer https://quarto.org/docs/presentations/revealjs/#themes
         # logo: Fig_logo_bar_ncu.png
         preview-links: auto # Allow preview links in presenting mode
         slide-number: true
         toc: true
         toc-title: Outline # Title for TOC
         toc-depth: 3
-        parallax-background-image: background.png
+        # parallax-background-image: background.png
+        parallax-background-image: https://raw.githubusercontent.com/okatsn/QuartoTemplates/main/tree-slide/background.png
         parallax-background-size: "1920px 1200px"
         parallax-background-horizontal: 20
         parallax-background-vertical: 20
         footer: <https:&#x2F;&#x2F;github.com&#x2F;okatsn>
-
+        chalkboard: true
 ---
-
-# 標題
-## 哈囉
-
-你好
