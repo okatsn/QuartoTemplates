@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+
+// $body-bg: #d6ffa448;
+// $body-color: #fff;
+$link-color: #186949;
+$code-color: #4758ab; // The same color for theme "serif"
+// $code-bg: #a3a3a3;
+
+// CHECKPOINT: Customize font: https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes
+// $font-family-sans-serif: "Noto Serif CJK TC", "Book Antiqua", Palatino,
+//     FreeSerif, serif !default;
+
+$presentation-heading-font: "Noto Serif CJK TC Black", "Noto Serif TC Black",
+    FreeSerif, serif !default; // second choice of font.
+$presentation-heading-color: #383d3d !default;
+// !default means these settings can be overridden.
+
+/*-- scss:rules --*/
+
+code.sourceCode {
+    font-size: larger;
+
+}
+
+blockquote {
+    font-size: smaller;
+}
+
+
+.thankyou p {
+    font-size: 100px;
+    overflow-y: auto;
+    text-align: right;
+    color: #333;
+}
+
+// set sourceCode larger
