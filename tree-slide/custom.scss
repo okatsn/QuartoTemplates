@@ -7,8 +7,8 @@ $code-color: #4758ab; // The same color for theme "serif"
 // $code-bg: #a3a3a3;
 
 // CHECKPOINT: Customize font: https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes
-// $font-family-sans-serif: "Noto Serif CJK TC", "Book Antiqua", Palatino,
-//     FreeSerif, serif !default;
+$font-family-sans-serif: "Noto Serif CJK TC Medium", "Noto Serif TC Medium",
+    FreeSerif, serif !default;
 
 $presentation-heading-font: "Noto Serif CJK TC Black", "Noto Serif TC Black",
     FreeSerif, serif !default; // second choice of font.
@@ -17,6 +17,7 @@ $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
 
+// set sourceCode larger
 code.sourceCode {
     font-size: larger;
 
@@ -28,10 +29,55 @@ blockquote {
 
 
 .thankyou p {
-    font-size: 100px;
+    font-size: 4rem;
     overflow-y: auto;
     text-align: right;
     color: #333;
+    font-weight: 600;
+    /* Semi-bold font weight */
 }
 
-// set sourceCode larger
+// Tags
+// {.xtag} is equivalent to something like {style="float:right;text-align:right;color:red"}
+// Example: Hello where [this part looks like a tag that appears as a animated fragment]{.nftag fragment-index=1 .fragment}
+
+// Tag that floats to the right
+
+.rtag {
+    font-size: 0.7em;
+    float: right;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+}
+
+// Tag that floats to the left
+
+.ltag {
+    font-size: 0.7em;
+    float: left;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+}
+
+// No-floating tag
+
+.nftag {
+    font-size: 0.7em;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+    /* 10px rounded corners */
+}
+
+
+// Inline image
+// Refer: https://stackoverflow.com/a/74100740
+.inlineimg {
+    margin: 0 !important;
+    height: 1em;
+}
