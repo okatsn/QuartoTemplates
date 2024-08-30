@@ -1,6 +1,7 @@
 {
     "qmd": {
         "title": "Title Goes Here",
+        "subtitle": "Subtitle Goes Here",
         "author": "Tsung-Hsi Wu",
         "affiliation": "National Central University",
         "date": "2024-08-06",

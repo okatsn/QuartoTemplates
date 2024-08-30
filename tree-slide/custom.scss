@@ -17,16 +17,37 @@ $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
 
-// set sourceCode larger
+// set code larger
+
+
+// Plain-text code (no language specified)
+code {
+    font-size: 1em;
+}
+
+// Source code (language specified, e.g., ```julia)
 code.sourceCode {
-    font-size: larger;
+    font-size: 1.3em;
 
 }
+
 
 blockquote {
     font-size: smaller;
 }
 
+
+// The first slide attributes
+
+h1.title {
+    font-size: 1.8em
+}
+
+p.subtitle {
+    font-size: 1.5em
+}
+
+// The final slide attributes
 
 .thankyou p {
     font-size: 4rem;
