@@ -1,5 +1,6 @@
 ---
 title: "{{qmd.title}}"
+subtitle: "{{qmd.subtitle}}"
 execute: 
     eval: false # by default don't evaluate cell
     echo: true # echo source code to doc
@@ -8,7 +9,7 @@ title-slide-attributes:
     # data-background-image: background.png # https://www.slidebackground.com/collection/natural-ppt
     data-background-size: contain
     data-background-opacity: "0.5"
-authour: # https://quarto.org/docs/authoring/front-matter.html
+author: # https://quarto.org/docs/authoring/front-matter.html
     - name: "{{qmd.author}}"
       affiliation: "{{qmd.affiliation}}"
 # institute: "{{qmd.institute}}" # This attaches to the first author only
@@ -33,4 +34,5 @@ format:
         parallax-background-vertical: 20
         footer: <{{qmd.footer}}>
         chalkboard: true
+        # Save, download and restore your sketch: https://stackoverflow.com/questions/76017331/highlight-elements-on-table-in-revealjs-quarto
 ---
