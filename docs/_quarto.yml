@@ -1,0 +1,27 @@
+project:
+  type: website
+  render: 
+    - index.qmd
+    - tree-slide.qmd
+
+website:
+  title: "QuartoTemplates"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: tree-slide.qmd
+        text: Tree Slide
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
+execute:
+  freeze: auto
+  # This make sure julia codes will be execute in local only. https://quarto.org/docs/publishing/github-pages.html#freezing-computations
