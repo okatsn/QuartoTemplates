@@ -12,7 +12,6 @@ title-slide-attributes:
 authour: # https://quarto.org/docs/authoring/front-matter.html
     - name: "Tsung-Hsi Wu"
 date: 2024-09-23
-jupyter: julia-1.10
 format: 
     revealjs:
         width: 1600 # increasing width and height results in a smaller relative size of font in display
