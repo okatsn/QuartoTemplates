@@ -33,4 +33,63 @@ format:
 
 # Customized Fragments
 
-My research in Earth Sciences focuses on innovative methodologies and analytical techniques to enhance the understanding of <span class="fragment highlight-forestgreen" fragment-index=1>soil water content estimation</span>, <span class="fragment highlight-indianred" fragment-index=2>stochastic earthquake dynamics</span>, and <span class="fragment highlight-steelblue" fragment-index=3>earthquake precursor detection</span>.
+## `highlight` and `highlight-current`
+
+## `highlight`
+
+Despite the default 
+<span class="fragment highlight-green" fragment-index=1>green</span>, 
+<span class="fragment highlight-red" fragment-index=2>red</span>, and 
+<span class="fragment highlight-blue" fragment-index=3>blue</span>, 
+there are three colors available for this template: 
+
+- <span class="fragment highlight-forestgreen" fragment-index=1>forest green</span>, 
+- <span class="fragment highlight-indianred" fragment-index=2>indian red</span>, and 
+- <span class="fragment highlight-steelblue" fragment-index=3>steel blue</span>.
+
+Code:
+
+```html
+- <span class="fragment highlight-forestgreen" fragment-index=1>forest green</span>, 
+- <span class="fragment highlight-indianred" fragment-index=2>indian red</span>, and 
+- <span class="fragment highlight-steelblue" fragment-index=3>steel blue</span>.
+
+```
+
+
+Noted that, class `fragment-` with `highlight-forestgreen`, `highlight-indianred`, `highlight-steelblue` also highlight the fragment of current index with font-weight `bold`.
+
+## `highlight-current`
+
+Similar to the use of `highlight`, but the effects will disappear if next fragment index is triggered. 
+
+Code: 
+
+```html
+- <span class="fragment highlight-current-forestgreen" fragment-index=1>forest green</span>, 
+- <span class="fragment highlight-current-indianred" fragment-index=2>indian red</span>, and 
+- <span class="fragment highlight-current-steelblue" fragment-index=3>steel blue</span>.
+```
+
+Output:
+
+- <span class="fragment highlight-current-forestgreen" fragment-index=1>forest green</span>, 
+- <span class="fragment highlight-current-indianred" fragment-index=2>indian red</span>, and 
+- <span class="fragment highlight-current-steelblue" fragment-index=3>steel blue</span>.
+
+
+## `highlight-bold` and `highlight-current-bold`
+
+When using `highlight-bold` and `highlight-current-bold` the original color is inherited. Both of them highlights the text with bold and slight shading.
+
+Code: 
+
+```html
+- <span class="fragment highlight-current-bold" fragment-index=1>bold (current)</span>, 
+- <span class="fragment highlight-bold" fragment-index=2>bold (persistent)indian red</span>, and 
+- <span class="fragment highlight-current-bold" fragment-index=1>bold (current)</span>
+```
+
+- <span class="fragment highlight-current-bold" fragment-index=1>bold (current)</span>, 
+- <span class="fragment highlight-bold" fragment-index=2>bold (persistent)</span>, and 
+- <span class="fragment highlight-current-bold" fragment-index=3>bold (current)</span>

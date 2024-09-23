@@ -104,43 +104,19 @@ p.subtitle {
 
 //// Fragments
 
-// Overwrite highlight color
-// Because I didn't find a way to make custom fragment to appear at very beginning, I choose to override the default color (using `!important` syntax)
-
-.highlight-red.visible {
-    color: indianred !important
-}
-
-.highlight-green.visible {
-    color: forestgreen !important
-}
-
-.highlight-blue.visible {
-    color: steelblue !important
-}
-
-.highlight-current-red.current-fragment {
-    color: indianred !important
-}
-
-.highlight-current-green.current-fragment {
-    color: forestgreen !important
-}
-
-.fragment.highlight-current-blue.current-fragment {
-    color: steelblue !important
-}
-
 // Customized highlighter
 
+// Color of After
 .fragment.highlight-current-indianred.visible {
     color: inherit;
 }
 
+// Color of After
 .fragment.highlight-indianred.visible {
     color: indianred;
 }
 
+// Forced default visibility
 .fragment.highlight-current-indianred,
 .fragment.highlight-indianred {
     opacity: 1 !important;
@@ -148,6 +124,7 @@ p.subtitle {
     color: inherit;
 }
 
+// The moment triggered (Current)
 .fragment.highlight-current-indianred.current-fragment,
 .fragment.highlight-indianred.current-fragment {
     color: indianred;
