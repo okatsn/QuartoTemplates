@@ -1,0 +1,6 @@
+{
+    "devcontainer_name": "QuartoTemplates",
+    "service": "devqt",
+    "image": "jujuliaqt",
+    "docker_compose_name": "for-QuartoTemplates"
+}
