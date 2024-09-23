@@ -1,13 +1,18 @@
 project:
   type: website
+  render: 
+    - index.qmd
+    - tree-slide.qmd
 
 website:
-  title: "docs"
+  title: "QuartoTemplates"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: tree-slide.qmd
+        text: Tree Slide
 
 format:
   html:
