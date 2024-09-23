@@ -5,3 +5,5 @@ title: "docs"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+For how this project be created, see: https://quarto.org/docs/websites/#quick-start
