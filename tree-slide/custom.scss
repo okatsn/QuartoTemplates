@@ -1,0 +1,275 @@
+/*-- scss:defaults --*/
+
+// $body-bg: #d6ffa448;
+// $body-color: #fff;
+$link-color: #186949;
+$code-color: #4758ab; // The same color for theme "serif"
+// $code-bg: #a3a3a3;
+
+// CHECKPOINT: Customize font: https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes
+$font-family-sans-serif: "Noto Serif CJK TC Medium", "Noto Serif TC Medium",
+    FreeSerif, serif !default;
+
+$presentation-heading-font: "Noto Serif CJK TC Black", "Noto Serif TC Black",
+    FreeSerif, serif !default; // second choice of font.
+$presentation-heading-color: #383d3d !default;
+// !default means these settings can be overridden.
+
+/*-- scss:rules --*/
+
+// set code larger
+
+
+// Plain-text code (no language specified)
+code {
+    font-size: 1em;
+}
+
+// Source code (language specified, e.g., ```julia)
+code.sourceCode {
+    font-size: 1.3em;
+
+}
+
+
+blockquote {
+    font-size: smaller;
+}
+
+//// TOC attributes (Not work)
+//
+// .reveal .TOC {
+//     /* Set the maximum height based on your slide height */
+//     max-height: 85vh;
+//     /* 85% of the viewport height */
+//     overflow-y: auto;
+//     /* Enable vertical scrolling */
+//     padding-right: 20px;
+//     /* Add padding to avoid text cutting off on the right */
+// }
+// 
+/* Custom CSS for scrollable TOC */
+// section#TOC {
+//     max-height: 100vh;
+//     /* Make sure the TOC does not exceed the viewport height */
+//     overflow-y: auto;
+//     /* Add vertical scrollbar if the content overflows */
+//     padding: 20px;
+//     /* Optional: Add padding for better appearance */
+// }
+
+
+//// TOC attributes (worked)
+//
+section#TOC nav[role="doc-toc"] {
+    max-height: 800px;
+    /* Limit the height of the TOC itself */
+    overflow-y: auto;
+    /* Enable vertical scrolling for the TOC */
+}
+
+// (optional)
+// section#TOC h2#toc-title {
+//     position: sticky;
+//     top: 0;
+//     background-color: white;
+//     z-index: 10;
+//     /* Keep the title fixed when scrolling */
+//     padding: 10px 0;
+// }
+
+
+
+
+// The first slide attributes
+
+h1.title {
+    font-size: 1.8em
+}
+
+p.subtitle {
+    font-size: 1.5em
+}
+
+// The final slide attributes
+
+.thankyou p {
+    font-size: 4rem;
+    overflow-y: auto;
+    text-align: right;
+    color: #333;
+    font-weight: 600;
+    /* Semi-bold font weight */
+}
+
+//// Fragments
+
+// Customized highlighter
+
+// Color of After
+.fragment.highlight-current-indianred.visible {
+    color: inherit;
+}
+
+// Color of After
+.fragment.highlight-indianred.visible {
+    color: indianred;
+}
+
+// Forced default visibility
+.fragment.highlight-current-indianred,
+.fragment.highlight-indianred {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit;
+}
+
+// The moment triggered (Current)
+.fragment.highlight-current-indianred.current-fragment,
+.fragment.highlight-indianred.current-fragment {
+    color: indianred;
+    font-weight: bold;
+}
+
+
+// steel blue
+.fragment.highlight-current-steelblue.visible {
+    color: inherit;
+}
+
+.fragment.highlight-steelblue.visible {
+    color: steelblue;
+}
+
+.fragment.highlight-current-steelblue,
+.fragment.highlight-steelblue {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit;
+}
+
+.fragment.highlight-current-steelblue.current-fragment,
+.fragment.highlight-steelblue.current-fragment {
+    color: steelblue;
+    font-weight: bold;
+}
+
+
+
+// forest green
+.fragment.highlight-current-forestgreen.visible {
+    color: inherit;
+}
+
+.fragment.highlight-forestgreen.visible {
+    color: forestgreen;
+}
+
+.fragment.highlight-current-forestgreen,
+.fragment.highlight-forestgreen {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit;
+}
+
+.fragment.highlight-current-forestgreen.current-fragment,
+.fragment.highlight-forestgreen.current-fragment {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+// bold
+.fragment.highlight-current-bold.visible {
+    color: inherit;
+}
+
+.fragment.highlight-bold.visible {
+    color: inherit;
+    font-weight: bold;
+    text-shadow: 2px 0 #888888;
+}
+
+.fragment.highlight-current-bold,
+.fragment.highlight-bold {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.fragment.highlight-current-bold.current-fragment,
+.fragment.highlight-bold.current-fragment {
+    font-weight: bold;
+    text-shadow: 2px 0 #888888;
+}
+
+
+
+
+// Blur
+// This is an experimental feature. While I expect the content is displayed with blur at first and then blur removed, the actual behavior is that the content is hidden at first, then appear blurred, and then blur removed.
+// Please refer https://revealjs.com/fragments/#custom-fragments-4.5.0
+// Example of use: <span class="fragment blur" data-fragment-index=0>Earth Sciences</span>
+// Advanced fragment techniques: https://stackoverflow.com/questions/33328330/how-can-i-make-the-first-fragment-highlighted-automatically-visible-in-reveal
+// Source code: https://github.com/hakimel/reveal.js/blob/master/css/reveal.scss
+
+// After current fragment
+.fragment.blur.visible {
+    filter: none;
+}
+
+// I expect <span class="fragment blur"> content </span> to be visible in the beginning but it doesn't until `!important` declaration.
+.fragment.blur {
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: blur(5px);
+}
+
+
+.fragment.blur.current-fragment {
+    filter: none;
+}
+
+
+// Tags
+// {.xtag} is equivalent to something like {style="float:right;text-align:right;color:red"}
+// Example: Hello where [this part looks like a tag that appears as a animated fragment]{.nftag fragment-index=1 .fragment}
+
+// Tag that floats to the right
+
+.rtag {
+    font-size: 0.7em;
+    float: right;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+}
+
+// Tag that floats to the left
+
+.ltag {
+    font-size: 0.7em;
+    float: left;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+}
+
+// No-floating tag
+
+.nftag {
+    font-size: 0.7em;
+    color: #fef9e7;
+    background-color: #229954;
+    border: 0.2em solid black;
+    border-radius: 10px;
+    /* 10px rounded corners */
+}
+
+
+// Inline image
+// Refer: https://stackoverflow.com/a/74100740
+.inlineimg {
+    margin: 0 !important;
+    height: 1em;
+}
