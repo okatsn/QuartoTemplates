@@ -1,0 +1,36 @@
+---
+title: "README"
+subtitle: "and tutorials"
+execute: 
+    eval: false # by default don't evaluate cell
+    echo: true # echo source code to doc
+# subtitle: "OptionalSubtitle"
+title-slide-attributes: 
+    # data-background-image: background.png # https://www.slidebackground.com/collection/natural-ppt
+    data-background-size: contain
+    data-background-opacity: "0.5"
+authour: # https://quarto.org/docs/authoring/front-matter.html
+    - name: "Tsung-Hsi Wu"
+date: 2024-09-23
+jupyter: julia-1.10
+format: 
+    revealjs:
+        width: 1600 # increasing width and height results in a smaller relative size of font in display
+        height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+        theme: [serif,custom.scss] # Please refer https://quarto.org/docs/presentations/revealjs/#themes
+        # logo: Fig_logo_bar_ncu.png
+        preview-links: auto # Allow preview links in presenting mode
+        slide-number: true
+        toc: true
+        toc-title: Outline # Title for TOC
+        toc-depth: 3
+        parallax-background-image: https://raw.githubusercontent.com/okatsn/QuartoTemplates/main/tree-slide/background.png
+        parallax-background-size: "1920px 1200px"
+        parallax-background-horizontal: 20
+        parallax-background-vertical: 20
+        footer: <https:&#x2F;&#x2F;github.com&#x2F;okatsn>
+---
+
+# Customized Fragments
+
+My research in Earth Sciences focuses on innovative methodologies and analytical techniques to enhance the understanding of <span class="fragment highlight-forestgreen" fragment-index=1>soil water content estimation</span>, <span class="fragment highlight-indianred" fragment-index=2>stochastic earthquake dynamics</span>, and <span class="fragment highlight-steelblue" fragment-index=3>earthquake precursor detection</span>.
