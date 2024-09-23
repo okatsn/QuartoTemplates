@@ -108,7 +108,9 @@ Code:
 
 # Inline tags and images
 
-## `rtag`, `ltag` and `nftag`
+## {}
+
+### `rtag`, `ltag` and `nftag`
 
 Code: 
 
@@ -121,3 +123,13 @@ Code:
 - Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}
 - Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}
 - Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}
+
+### Inline image
+
+Code:
+
+```
+- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.
+```
+
+- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.
