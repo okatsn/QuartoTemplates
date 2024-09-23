@@ -105,3 +105,19 @@ Code:
 ```
 
 - <span class="fragment blur" fragment-index=1>Blurred text.</span>
+
+# Inline tags and images
+
+## `rtag`, `ltag` and `nftag`
+
+Code: 
+
+```
+- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}
+- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}
+- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}
+```
+
+- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}
+- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}
+- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}
