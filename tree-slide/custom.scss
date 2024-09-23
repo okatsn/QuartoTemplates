@@ -36,6 +36,50 @@ blockquote {
     font-size: smaller;
 }
 
+//// TOC attributes (Not work)
+//
+// .reveal .TOC {
+//     /* Set the maximum height based on your slide height */
+//     max-height: 85vh;
+//     /* 85% of the viewport height */
+//     overflow-y: auto;
+//     /* Enable vertical scrolling */
+//     padding-right: 20px;
+//     /* Add padding to avoid text cutting off on the right */
+// }
+// 
+/* Custom CSS for scrollable TOC */
+// section#TOC {
+//     max-height: 100vh;
+//     /* Make sure the TOC does not exceed the viewport height */
+//     overflow-y: auto;
+//     /* Add vertical scrollbar if the content overflows */
+//     padding: 20px;
+//     /* Optional: Add padding for better appearance */
+// }
+
+
+//// TOC attributes (worked)
+//
+section#TOC nav[role="doc-toc"] {
+    max-height: 800px;
+    /* Limit the height of the TOC itself */
+    overflow-y: auto;
+    /* Enable vertical scrolling for the TOC */
+}
+
+// (optional)
+// section#TOC h2#toc-title {
+//     position: sticky;
+//     top: 0;
+//     background-color: white;
+//     z-index: 10;
+//     /* Keep the title fixed when scrolling */
+//     padding: 10px 0;
+// }
+
+
+
 
 // The first slide attributes
 
