@@ -1,0 +1,1 @@
+Sitemap: https://okatsn.github.io/QuartoTemplates/sitemap.xml
