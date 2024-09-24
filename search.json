@@ -1,51 +1,90 @@
 [
   {
-    "objectID": "tree-slide.html#highlight-and-highlight-current",
-    "href": "tree-slide.html#highlight-and-highlight-current",
+    "objectID": "others/about.html",
+    "href": "others/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "tutorial.html",
+    "href": "tutorial.html",
+    "title": "Slide Templates",
+    "section": "",
+    "text": "Tree slide",
+    "crumbs": [
+      "Home",
+      "Slide Templates"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto Templates",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nFor how this project be created, see: https://quarto.org/docs/websites/#quick-start"
+  },
+  {
+    "objectID": "slides/tree-slide.html#highlight-and-highlight-current",
+    "href": "slides/tree-slide.html#highlight-and-highlight-current",
     "title": "README",
     "section": "highlight and highlight-current",
     "text": "highlight and highlight-current"
   },
   {
-    "objectID": "tree-slide.html#highlight",
-    "href": "tree-slide.html#highlight",
+    "objectID": "slides/tree-slide.html#highlight",
+    "href": "slides/tree-slide.html#highlight",
     "title": "README",
     "section": "highlight",
     "text": "highlight\nDespite the default green, red, and blue, there are three colors available for this template:\n\nforest green,\nindian red, and\nsteel blue.\n\nCode:\n- &lt;span class=\"fragment highlight-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nNoted that, class fragment- with highlight-forestgreen, highlight-indianred, highlight-steelblue also highlight the fragment of current index with font-weight bold."
   },
   {
-    "objectID": "tree-slide.html#highlight-current",
-    "href": "tree-slide.html#highlight-current",
+    "objectID": "slides/tree-slide.html#highlight-current",
+    "href": "slides/tree-slide.html#highlight-current",
     "title": "README",
     "section": "highlight-current",
     "text": "highlight-current\nSimilar to the use of highlight, but the effects will disappear if next fragment index is triggered.\nCode:\n- &lt;span class=\"fragment highlight-current-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-current-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-current-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nOutput:\n\nforest green,\nindian red, and\nsteel blue."
   },
   {
-    "objectID": "tree-slide.html#highlight-bold-and-highlight-current-bold",
-    "href": "tree-slide.html#highlight-bold-and-highlight-current-bold",
+    "objectID": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
+    "href": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
     "title": "README",
     "section": "highlight-bold and highlight-current-bold",
     "text": "highlight-bold and highlight-current-bold\nWhen using highlight-bold and highlight-current-bold the original color is inherited. Both of them highlights the text with bold and slight shading.\nCode:\n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-bold\" fragment-index=2&gt;bold (persistent)indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;\n\nbold (current),\nbold (persistent), and\nbold (current)"
   },
   {
-    "objectID": "tree-slide.html#blur",
-    "href": "tree-slide.html#blur",
+    "objectID": "slides/tree-slide.html#blur",
+    "href": "slides/tree-slide.html#blur",
     "title": "README",
     "section": "blur",
     "text": "blur\nBlur the text in the beginning, and then unveil it.\nCode:\n- &lt;span class=\"fragment blur\" fragment-index=1&gt;Blurred text.&lt;/span&gt;\n\nBlurred text."
   },
   {
-    "objectID": "tree-slide.html#section",
-    "href": "tree-slide.html#section",
+    "objectID": "slides/tree-slide.html#section",
+    "href": "slides/tree-slide.html#section",
     "title": "README",
     "section": "",
     "text": "rtag, ltag and nftag\nCode:\n- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}\n- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}\n- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}\n\nHello World a no-floating tag\nHello World a align-right tag\nHello World a align-left tag\n\nInline image\nCode:\n- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.\n\nHello, this () is an inline image.\n\n\n\n\nhttps://github.com/okatsn"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "docs",
+    "objectID": "others/website-how.html",
+    "href": "others/website-how.html",
+    "title": "How this documentation be built",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nFor how this project be created, see: https://quarto.org/docs/websites/#quick-start"
+    "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nCreate the .github/workflows/deploy.yml"
+  },
+  {
+    "objectID": "others/website-how.html#publish-on-command",
+    "href": "others/website-how.html#publish-on-command",
+    "title": "How this documentation be built",
+    "section": "",
+    "text": "In bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save."
+  },
+  {
+    "objectID": "others/website-how.html#publish-via-github-workflows",
+    "href": "others/website-how.html#publish-via-github-workflows",
+    "title": "How this documentation be built",
+    "section": "",
+    "text": "Create the .github/workflows/deploy.yml"
   }
 ]
