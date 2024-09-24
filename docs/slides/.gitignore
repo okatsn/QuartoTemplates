@@ -1,0 +1,4 @@
+*.qmd
+*.scss
+# Files that should be copied here in the CI workflow.
+# If you encounter slides/* file-not--fonud error in local rendering, manually run . docs/cpfiles.sh and render again.

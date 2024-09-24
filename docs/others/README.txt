@@ -1,0 +1,1 @@
+This is the folder for other documents that are not directly associated with this package.

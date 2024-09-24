@@ -3,7 +3,11 @@ name: Quarto Publish
 on:
   workflow_dispatch:
   push:
-    branches: main
+    paths:
+      - "*.qmd"
+      - "*.md"
+    branches:
+      - main
 
 jobs:
   build-deploy:
@@ -16,6 +20,9 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Copy files before rendering
+        run: . docs/cpfiles.sh
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

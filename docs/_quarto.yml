@@ -1,8 +1,10 @@
 project:
   type: website
-  render: 
-    - index.qmd
-    - tree-slide.qmd
+  # render: 
+  #   - index.qmd
+  # # By default, it renders all qmd, md files.
+  # See https://quarto.org/docs/websites/index.html#render-targets
+
 
 website:
   title: "QuartoTemplates"
@@ -10,9 +12,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - href: tree-slide.qmd
-        text: Tree Slide
+      - others/about.qmd
+      - others/website-how.md
+  sidebar:
+    style: "docked"
+    # contents: auto
+    # # All quarto markdown with "title" displayed on the side.
+    # # use an explicit /* to indicate only the documents in the root directory: 
+    contents: 
+      - auto: /*
+
 
 format:
   html:

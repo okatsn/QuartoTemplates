@@ -1,0 +1,7 @@
+---
+title: "Slide Templates"
+---
+
+# Tree slide
+
+<iframe width="780" height="500" src="slides/tree-slide.html" title="Tree Slide"></iframe>

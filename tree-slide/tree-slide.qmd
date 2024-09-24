@@ -16,7 +16,7 @@ format:
     revealjs:
         width: 1600 # increasing width and height results in a smaller relative size of font in display
         height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
-        theme: [serif,custom] # Please refer https://quarto.org/docs/presentations/revealjs/#themes
+        theme: [serif,custom.scss] # Please refer https://quarto.org/docs/presentations/revealjs/#themes
         # logo: Fig_logo_bar_ncu.png
         preview-links: auto # Allow preview links in presenting mode
         slide-number: true
