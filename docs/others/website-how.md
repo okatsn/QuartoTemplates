@@ -24,6 +24,8 @@ See also:
 - https://github.com/quarto-dev/quarto-web for the source code of how Quarto's official website be built
 
 
+> ⚠️ If you encounter slides/* file-not--fonud error in local rendering, manually run `. docs/cpfiles.sh` and render again.
+
 ## Publish
 
 Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action
