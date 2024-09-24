@@ -71,7 +71,7 @@
     "href": "Guide.html",
     "title": "Use Templates",
     "section": "",
-    "text": "By executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
+    "text": "Documentation\n\n\n\n\n\n\nBy executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
     "crumbs": [
       "Home",
       "Use Templates"
