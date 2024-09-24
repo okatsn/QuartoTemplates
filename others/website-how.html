@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../others/website-how.html" aria-current="page"> 
-<span class="menu-text">How this documentation be built</span></a>
+<span class="menu-text">How this website be built</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -139,10 +139,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#how-this-documentation-be-built" id="toc-how-this-documentation-be-built" class="nav-link active" data-scroll-target="#how-this-documentation-be-built">How this documentation be built</a>
+  <li><a href="#how-this-website-be-built" id="toc-how-this-website-be-built" class="nav-link active" data-scroll-target="#how-this-website-be-built">How this website be built</a>
+  <ul class="collapse">
+  <li><a href="#create" id="toc-create" class="nav-link" data-scroll-target="#create">Create</a></li>
+  <li><a href="#render" id="toc-render" class="nav-link" data-scroll-target="#render">Render</a>
+  <ul class="collapse">
+  <li><a href="#render-the-website-on-local" id="toc-render-the-website-on-local" class="nav-link" data-scroll-target="#render-the-website-on-local">Render the website on local</a></li>
+  </ul></li>
+  <li><a href="#publish" id="toc-publish" class="nav-link" data-scroll-target="#publish">Publish</a>
   <ul class="collapse">
   <li><a href="#publish-on-command" id="toc-publish-on-command" class="nav-link" data-scroll-target="#publish-on-command">Publish on command</a></li>
   <li><a href="#publish-via-github-workflows" id="toc-publish-via-github-workflows" class="nav-link" data-scroll-target="#publish-via-github-workflows">Publish via Github workflows</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -153,11 +161,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="how-this-documentation-be-built" class="level1">
-<h1>How this documentation be built</h1>
+<section id="how-this-website-be-built" class="level1">
+<h1>How this website be built</h1>
+<p>See https://quarto.org/docs/websites/</p>
+<section id="create" class="level2">
+<h2 class="anchored" data-anchor-id="create">Create</h2>
+<p><a href="https://quarto.org/docs/websites/#quick-start">Quick Start</a></p>
+</section>
+<section id="render" class="level2">
+<h2 class="anchored" data-anchor-id="render">Render</h2>
+<section id="render-the-website-on-local" class="level3">
+<h3 class="anchored" data-anchor-id="render-the-website-on-local">Render the website on local</h3>
+<pre><code>cd docs
+quarto render --cache-refresh</code></pre>
+<p>See also:</p>
+<ul>
+<li><code>.vscode/settings.json</code> for <code>livePreview</code> settings</li>
+<li>https://quarto.org/docs/websites/#config-file for setting up <code>_quarto.yml</code></li>
+<li>https://quarto.org/docs/websites/website-tools.html for Website tools</li>
+<li>https://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built</li>
+</ul>
+</section>
+</section>
+<section id="publish" class="level2">
+<h2 class="anchored" data-anchor-id="publish">Publish</h2>
 <p>Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action</p>
-<section id="publish-on-command" class="level2">
-<h2 class="anchored" data-anchor-id="publish-on-command">Publish on command</h2>
+<section id="publish-on-command" class="level3">
+<h3 class="anchored" data-anchor-id="publish-on-command">Publish on command</h3>
 <p>In bash,</p>
 <pre><code>cd docs
 quarto publish gh-pages</code></pre>
@@ -166,11 +196,12 @@ quarto publish gh-pages</code></pre>
 <li>Noted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.</li>
 </ul>
 </section>
-<section id="publish-via-github-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="publish-via-github-workflows">Publish via Github workflows</h2>
-<p>Create the <code>.github/workflows/deploy.yml</code></p>
+<section id="publish-via-github-workflows" class="level3">
+<h3 class="anchored" data-anchor-id="publish-via-github-workflows">Publish via Github workflows</h3>
+<p>See <code>.github/workflows/deploy.yml</code>.</p>
 
 
+</section>
 </section>
 </section>
 

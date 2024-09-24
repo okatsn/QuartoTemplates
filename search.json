@@ -69,22 +69,29 @@
   {
     "objectID": "others/website-how.html",
     "href": "others/website-how.html",
-    "title": "How this documentation be built",
+    "title": "How this website be built",
     "section": "",
-    "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nCreate the .github/workflows/deploy.yml"
+    "text": "See https://quarto.org/docs/websites/\n\n\nQuick Start\n\n\n\n\n\ncd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built\n\n\n\n\n\nReferring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
   },
   {
-    "objectID": "others/website-how.html#publish-on-command",
-    "href": "others/website-how.html#publish-on-command",
-    "title": "How this documentation be built",
+    "objectID": "others/website-how.html#create",
+    "href": "others/website-how.html#create",
+    "title": "How this website be built",
     "section": "",
-    "text": "In bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save."
+    "text": "Quick Start"
   },
   {
-    "objectID": "others/website-how.html#publish-via-github-workflows",
-    "href": "others/website-how.html#publish-via-github-workflows",
-    "title": "How this documentation be built",
+    "objectID": "others/website-how.html#render",
+    "href": "others/website-how.html#render",
+    "title": "How this website be built",
     "section": "",
-    "text": "Create the .github/workflows/deploy.yml"
+    "text": "cd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built"
+  },
+  {
+    "objectID": "others/website-how.html#publish",
+    "href": "others/website-how.html#publish",
+    "title": "How this website be built",
+    "section": "",
+    "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
   }
 ]
