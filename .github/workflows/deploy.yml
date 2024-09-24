@@ -24,6 +24,7 @@ jobs:
       - name: Copy files before rendering
         run: . docs/cpfiles.sh
 
+      # See https://github.com/quarto-dev/quarto-actions/blob/main/publish/action.yml
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:

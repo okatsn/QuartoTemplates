@@ -1,4 +1,6 @@
-## Example
+# Use Templates
+
+## Template `tree-slide`
 ### By Executing `tree-slide.sh`
 
 By executing `tree-slide.sh`, you can create a new `index.qmd` file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of `tree-slide` in the directory of `../HelloWorld` at one click.
