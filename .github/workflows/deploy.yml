@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "*.qmd"
-      - "*.md"
+      - "**/*.qmd"
+      - "**/*.md"
     branches:
       - main
 
