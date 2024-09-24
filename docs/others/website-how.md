@@ -1,4 +1,4 @@
-# README
+# How this documentation be built
 
 Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action
 
