@@ -1,5 +1,7 @@
 # Use Templates
 
+[![Documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://okatsn.github.io/QuartoTemplates/)
+
 ## Template `tree-slide`
 ### By Executing `tree-slide.sh`
 
