@@ -3,9 +3,11 @@ name: Quarto Publish
 on:
   workflow_dispatch:
   push:
+    paths:
+      - "*.qmd"
+      - "*.md"
     branches:
       - main
-      - arrange-workflows
 
 jobs:
   build-deploy:
