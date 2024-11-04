@@ -17,6 +17,12 @@ $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
 
+// Footnote (not aside)
+// It is of class="aside-footnotes", so there is an additional `.`
+.aside-footnotes {
+    font-size: 0.7em;
+}
+
 // set code larger
 
 
