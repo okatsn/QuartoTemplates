@@ -238,15 +238,23 @@ p.subtitle {
 // Tags
 // {.xtag} is equivalent to something like {style="float:right;text-align:right;color:red"}
 // Example: Hello where [this part looks like a tag that appears as a animated fragment]{.nftag fragment-index=1 .fragment}
+// Colors: https://www.w3schools.com/tags/ref_colornames.asp
+// Ohter good colors
+// - DarkGoldenRod #B8860B
+// - DarkOliveGreen #556B2F
+// - DarkCyan #008B8B // Tag that floats to the right
+// - FireBrick #B22222
+
 
 // Tag that floats to the right
+
 
 .rtag {
     font-size: 0.7em;
     float: right;
     color: #fef9e7;
-    background-color: #229954;
-    border: 0.2em solid black;
+    background-color: #008B8B;
+    border: 0.2em solid #008B8B;
     border-radius: 10px;
 }
 
@@ -256,8 +264,8 @@ p.subtitle {
     font-size: 0.7em;
     float: left;
     color: #fef9e7;
-    background-color: #229954;
-    border: 0.2em solid black;
+    background-color: #008B8B;
+    border: 0.2em solid #008B8B;
     border-radius: 10px;
 }
 
