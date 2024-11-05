@@ -98,6 +98,9 @@ p.subtitle {
 }
 
 // The final slide attributes
+// :::{.thankyou}
+// Thank you for listening
+// :::
 
 .thankyou p {
     font-size: 4rem;
@@ -107,6 +110,20 @@ p.subtitle {
     font-weight: 600;
     /* Semi-bold font weight */
 }
+
+.thankyou-gold p {
+    font-size: 100px;
+    overflow-y: auto;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.7em;
+    color: #fef9e7;
+    background-color: #B8860B;
+    border: 0.2em solid #B8860B;
+    border-radius: 10px;
+    /* Semi-bold font weight */
+}
+
 
 //// Fragments
 
