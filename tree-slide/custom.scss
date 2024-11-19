@@ -38,6 +38,22 @@ code.sourceCode {
 }
 
 
+// Math
+// See https://github.com/quarto-dev/quarto-cli/discussions/2392#discussioncomment-3614052
+
+// Inline math 
+.math.inline {
+    font-size: 100% !important;
+}
+
+// Displayed mode (those bracketed by$$) math
+.math.display {
+    font-size: 80% !important;
+    // color: #b22222;
+}
+
+// Quote
+
 blockquote {
     font-size: smaller;
 }
@@ -317,7 +333,7 @@ p.subtitle {
 
 .brtag {
     font-size: 0.7em;
-    float: left;
+    float: right;
     color: #fef9e7;
     background-color: black;
     border: 0.2em solid black;
