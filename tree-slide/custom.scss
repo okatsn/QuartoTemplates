@@ -277,7 +277,11 @@ p.subtitle {
 // - DarkOliveGreen #556B2F
 // - DarkCyan #008B8B // Tag that floats to the right
 // - FireBrick #B22222
-
+//
+// KEYNOTE: 
+// - Tag will attach to the succeeding element, even when there are line breaks.
+//   If you want the tag appear alone in one line, use an empty character
+//   Unicode Character “⠀” (U+2800)
 
 // Tag that floats to the right
 
