@@ -17,18 +17,17 @@ $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
 
-// Footnote (not aside)
-// It is of class="aside-footnotes", so there is an additional `.`
-.aside-footnotes {
-    font-size: 0.7em;
-}
-
 // set code larger
 
 
 // Plain-text code (no language specified)
 code {
     font-size: 1em;
+}
+
+// It is of class="aside-footnotes"
+.aside-footnotes {
+    font-size: 0.7em;
 }
 
 // Source code (language specified, e.g., ```julia)
@@ -55,7 +54,7 @@ code.sourceCode {
 // Quote
 
 blockquote {
-    font-size: smaller;
+    font-size: 0.8em;
 }
 
 //// TOC attributes (Not work)
@@ -114,9 +113,6 @@ p.subtitle {
 }
 
 // The final slide attributes
-// :::{.thankyou}
-// Thank you for listening
-// :::
 
 .thankyou p {
     font-size: 4rem;
@@ -127,21 +123,34 @@ p.subtitle {
     /* Semi-bold font weight */
 }
 
-.thankyou-gold p {
-    font-size: 100px;
-    overflow-y: auto;
-    text-align: right;
-    font-weight: 600;
-    font-size: 0.7em;
-    color: #fef9e7;
-    background-color: #B8860B;
-    border: 0.2em solid #B8860B;
-    border-radius: 10px;
-    /* Semi-bold font weight */
+//// Fragments
+
+// Overwrite highlight color
+// Because I didn't find a way to make custom fragment to appear at very beginning, I choose to override the default color (using `!important` syntax)
+
+.highlight-red.visible {
+    color: indianred !important
 }
 
+.highlight-green.visible {
+    color: forestgreen !important
+}
 
-//// Fragments
+.highlight-blue.visible {
+    color: steelblue !important
+}
+
+.highlight-current-red.current-fragment {
+    color: indianred !important
+}
+
+.highlight-current-green.current-fragment {
+    color: forestgreen !important
+}
+
+.fragment.highlight-current-blue.current-fragment {
+    color: steelblue !important
+}
 
 // Customized highlighter
 
@@ -306,26 +315,6 @@ p.subtitle {
     border-radius: 10px;
 }
 
-// No-floating tag
-
-.nftag {
-    font-size: 0.7em;
-    color: #fef9e7;
-    background-color: #008B8B;
-    border: 0.2em solid #008B8B;
-    border-radius: 10px;
-    /* 10px rounded corners */
-}
-
-
-// Inline image
-// Refer: https://stackoverflow.com/a/74100740
-.inlineimg {
-    margin: 0 !important;
-    height: 1em;
-}
-
-
 .bltag {
     font-size: 0.7em;
     float: left;
@@ -344,6 +333,155 @@ p.subtitle {
     border-radius: 10px;
 }
 
-// TODO:
-// I need
-// - A information block for emphasizing one or two lines sentence which sits in the center of the block. I think the background color of pale blue would be good.
+
+// No-floating tag
+
+.nftag {
+    font-size: 0.7em;
+    color: #fef9e7;
+    background-color: #008B8B;
+    border: 0.2em solid #008B8B;
+    border-radius: 10px;
+    /* 10px rounded corners */
+}
+
+
+// The final slide attributes
+
+.thankyou-gold p {
+    font-size: 100px;
+    overflow-y: auto;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.7em;
+    color: #fef9e7;
+    background-color: #B8860B;
+    border: 0.2em solid #B8860B;
+    border-radius: 10px;
+    /* Semi-bold font weight */
+}
+
+
+// Inline image
+// Refer: https://stackoverflow.com/a/74100740
+.inlineimg {
+    margin: 0 !important;
+    height: 1em;
+}
+
+
+
+.fragment.highlight-back {
+    position: relative;
+    z-index: 2; // Make sure the text stays on top
+    /* Make text always visible, overriding reveal.js fragment behavior */
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Default highlight color if not specified */
+    --bg-color: rgba(255, 255, 0, 0.5);
+}
+
+
+.fragment.highlight-back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%; // shift the block toward right 5%,
+    transform: translate(-8%, -0px); // and then shift the block -8% percent (toward left), in order to make space for the padding to the left
+    /* Center horizontally and position slightly higher */
+    // -50%: shift the block 50 percent the length of the block from the end of the highlighted word, in order to make it centered to the target word.
+    background-color: var(--bg-color);
+    /* Yellow with 50% opacity */
+    border: 0px solid var(--bg-color);
+    padding-top: 0px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    border-radius: 10px;
+    /* Curved corners */
+    z-index: -1;
+    /* Place behind the highlighted text */
+    width: 105%;
+    /* Make background wider than text */
+    height: 110%;
+    /* Make background taller than text */
+    /* Initially invisible */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the highlight background only when fragment is active */
+.fragment.highlight-back.visible::after {
+    opacity: 1;
+}
+
+
+.fragment.highlight-current-back {
+    position: relative;
+    z-index: 2;
+    opacity: 1 !important;
+    visibility: visible !important;
+    /* Default highlight color if not specified */
+    --bg-color: rgba(255, 255, 0, 0.5);
+}
+
+/* Initially hide the highlight background */
+.fragment.highlight-current-back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    transform: translate(-8%, -0px);
+    /* Use the custom variable for background color */
+    background-color: var(--bg-color);
+    border: 0px solid rgba(255, 255, 0, 0.9);
+    padding-top: 0px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    border-radius: 10px;
+    z-index: -1;
+    width: 105%;
+    height: 110%;
+    /* Initially invisible */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the highlight background ONLY when fragment is both visible AND current */
+.fragment.highlight-current-back.visible.current-fragment::after {
+    opacity: 1;
+}
+
+/* Hide the highlight when moving away from this fragment */
+.fragment.highlight-current-back.visible:not(.current-fragment)::after {
+    opacity: 0;
+}
+
+.custom-box {
+    position: absolute;
+    --left: 20px;
+    --top: 20px;
+    /* Distance from bottom */
+    // left: 50%;
+    // /* Center horizontally */
+    // transform: translateX(-50%);
+    // /* Ensure proper centering */
+
+    /* Default values that can be overridden */
+    --bg-color: #3fb618;
+    --width: 150px;
+    --height: 150px;
+    --radius: 20px;
+
+    /* Use the variables */
+    background-color: var(--bg-color);
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--radius);
+    left: var(--left);
+    top: var(--top);
+
+    /* Ensure the box stays BEHIND other content */
+    z-index: -10;
+}
