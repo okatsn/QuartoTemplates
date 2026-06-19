@@ -1,5 +1,5 @@
-FROM okatsn/my-jupyter-with-julia:v2026c
 FROM okatsn/my-quarto-build:latest AS build-quarto
+FROM okatsn/my-jupyter-with-julia:v2026c
 
 
 USER root
