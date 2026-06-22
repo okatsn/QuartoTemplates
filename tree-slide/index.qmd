@@ -1,11 +1,11 @@
 ---
 title: "Title Goes Here"
 subtitle: "Subtitle Goes Here"
-execute: 
+execute:
     eval: false # by default don't evaluate cell
     echo: true # echo source code to doc
 # subtitle: "OptionalSubtitle"
-title-slide-attributes: 
+title-slide-attributes:
     # data-background-image: background.png # https://www.slidebackground.com/collection/natural-ppt
     data-background-size: contain
     data-background-opacity: "0.5"
@@ -16,7 +16,7 @@ author: # https://quarto.org/docs/authoring/front-matter.html
 date: 2026-06-19
 jupyter: julia-1.10
 # bibliography: main.bib
-format: 
+format:
     revealjs:
         width: 1600 # increasing width and height results in a smaller relative size of font in display
         height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
