@@ -1,52 +1,32 @@
 [
   {
-    "objectID": "slides/tree-slide.html#highlight-and-highlight-current",
-    "href": "slides/tree-slide.html#highlight-and-highlight-current",
-    "title": "README",
-    "section": "highlight and highlight-current",
-    "text": "highlight and highlight-current"
-  },
-  {
-    "objectID": "slides/tree-slide.html#highlight",
-    "href": "slides/tree-slide.html#highlight",
-    "title": "README",
-    "section": "highlight",
-    "text": "highlight\nDespite the default green, red, and blue, there are three colors available for this template:\n\nforest green,\nindian red, and\nsteel blue.\n\nCode:\n- &lt;span class=\"fragment highlight-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nNoted that, class fragment- with highlight-forestgreen, highlight-indianred, highlight-steelblue also highlight the fragment of current index with font-weight bold."
-  },
-  {
-    "objectID": "slides/tree-slide.html#highlight-current",
-    "href": "slides/tree-slide.html#highlight-current",
-    "title": "README",
-    "section": "highlight-current",
-    "text": "highlight-current\nSimilar to the use of highlight, but the effects will disappear if next fragment index is triggered.\nCode:\n- &lt;span class=\"fragment highlight-current-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-current-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-current-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nOutput:\n\nforest green,\nindian red, and\nsteel blue."
-  },
-  {
-    "objectID": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
-    "href": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
-    "title": "README",
-    "section": "highlight-bold and highlight-current-bold",
-    "text": "highlight-bold and highlight-current-bold\nWhen using highlight-bold and highlight-current-bold the original color is inherited. Both of them highlights the text with bold and slight shading.\nCode:\n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;, \n- &lt;span class=\"fragment highlight-bold\" fragment-index=2&gt;bold (persistent)indian red&lt;/span&gt;, and \n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;\n\nbold (current),\nbold (persistent), and\nbold (current)"
-  },
-  {
-    "objectID": "slides/tree-slide.html#blur",
-    "href": "slides/tree-slide.html#blur",
-    "title": "README",
-    "section": "blur",
-    "text": "blur\nBlur the text in the beginning, and then unveil it.\nCode:\n- &lt;span class=\"fragment blur\" fragment-index=1&gt;Blurred text.&lt;/span&gt;\n\nBlurred text."
-  },
-  {
-    "objectID": "slides/tree-slide.html#section",
-    "href": "slides/tree-slide.html#section",
-    "title": "README",
-    "section": "",
-    "text": "rtag, ltag and nftag\nCode:\n- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}\n- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}\n- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}\n\nHello World a no-floating tag\nHello World a align-right tag\nHello World a align-left tag\n\nInline image\nCode:\n- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.\n\nHello, this () is an inline image.\n\n\n\n\nhttps://github.com/okatsn"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Quarto Templates",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nFor how this project be created, see: https://quarto.org/docs/websites/#quick-start"
+  },
+  {
+    "objectID": "Guide.html",
+    "href": "Guide.html",
+    "title": "Use Templates",
+    "section": "",
+    "text": "Documentation\n\n\n\n\n\n\nBy executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
+    "crumbs": [
+      "Home",
+      "Use Templates"
+    ]
+  },
+  {
+    "objectID": "Guide.html#template-tree-slide",
+    "href": "Guide.html#template-tree-slide",
+    "title": "Use Templates",
+    "section": "",
+    "text": "By executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
+    "crumbs": [
+      "Home",
+      "Use Templates"
+    ]
   },
   {
     "objectID": "others/website-how.html",
@@ -77,6 +57,13 @@
     "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
   },
   {
+    "objectID": "others/about.html",
+    "href": "others/about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "tutorial.html",
     "href": "tutorial.html",
     "title": "Slide Templates",
@@ -88,32 +75,45 @@
     ]
   },
   {
-    "objectID": "others/about.html",
-    "href": "others/about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "objectID": "slides/tree-slide.html#highlight-and-highlight-current",
+    "href": "slides/tree-slide.html#highlight-and-highlight-current",
+    "title": "README",
+    "section": "highlight and highlight-current",
+    "text": "highlight and highlight-current"
   },
   {
-    "objectID": "Guide.html",
-    "href": "Guide.html",
-    "title": "Use Templates",
-    "section": "",
-    "text": "Documentation\n\n\n\n\n\n\nBy executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
-    "crumbs": [
-      "Home",
-      "Use Templates"
-    ]
+    "objectID": "slides/tree-slide.html#highlight",
+    "href": "slides/tree-slide.html#highlight",
+    "title": "README",
+    "section": "highlight",
+    "text": "highlight\nDespite the default green, red, and blue, there are three colors available for this template:\n\nforest green,\nindian red, and\nsteel blue.\n\nCode:\n- &lt;span class=\"fragment highlight-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;,\n- &lt;span class=\"fragment highlight-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and\n- &lt;span class=\"fragment highlight-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nNoted that, class fragment- with highlight-forestgreen, highlight-indianred, highlight-steelblue also highlight the fragment of current index with font-weight bold."
   },
   {
-    "objectID": "Guide.html#template-tree-slide",
-    "href": "Guide.html#template-tree-slide",
-    "title": "Use Templates",
+    "objectID": "slides/tree-slide.html#highlight-current",
+    "href": "slides/tree-slide.html#highlight-current",
+    "title": "README",
+    "section": "highlight-current",
+    "text": "highlight-current\nSimilar to the use of highlight, but the effects will disappear if next fragment index is triggered.\nCode:\n- &lt;span class=\"fragment highlight-current-forestgreen\" fragment-index=1&gt;forest green&lt;/span&gt;,\n- &lt;span class=\"fragment highlight-current-indianred\" fragment-index=2&gt;indian red&lt;/span&gt;, and\n- &lt;span class=\"fragment highlight-current-steelblue\" fragment-index=3&gt;steel blue&lt;/span&gt;.\nOutput:\n\nforest green,\nindian red, and\nsteel blue."
+  },
+  {
+    "objectID": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
+    "href": "slides/tree-slide.html#highlight-bold-and-highlight-current-bold",
+    "title": "README",
+    "section": "highlight-bold and highlight-current-bold",
+    "text": "highlight-bold and highlight-current-bold\nWhen using highlight-bold and highlight-current-bold the original color is inherited. Both of them highlights the text with bold and slight shading.\nCode:\n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;,\n- &lt;span class=\"fragment highlight-bold\" fragment-index=2&gt;bold (persistent)indian red&lt;/span&gt;, and\n- &lt;span class=\"fragment highlight-current-bold\" fragment-index=1&gt;bold (current)&lt;/span&gt;\n\nbold (current),\nbold (persistent), and\nbold (current)"
+  },
+  {
+    "objectID": "slides/tree-slide.html#blur",
+    "href": "slides/tree-slide.html#blur",
+    "title": "README",
+    "section": "blur",
+    "text": "blur\nBlur the text in the beginning, and then unveil it.\nCode:\n- &lt;span class=\"fragment blur\" fragment-index=1&gt;Blurred text.&lt;/span&gt;\n\nBlurred text."
+  },
+  {
+    "objectID": "slides/tree-slide.html#section",
+    "href": "slides/tree-slide.html#section",
+    "title": "README",
     "section": "",
-    "text": "By executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
-    "crumbs": [
-      "Home",
-      "Use Templates"
-    ]
+    "text": "rtag, ltag and nftag\nCode:\n- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}\n- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}\n- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}\n\nHello World a no-floating tag\nHello World a align-right tag\nHello World a align-left tag\n\nInline image\nCode:\n- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.\n\nHello, this () is an inline image."
   }
 ]
