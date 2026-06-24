@@ -40,17 +40,17 @@ RUN apt-get update && \
     && fc-cache -f -v
 
 
-# # # [OJS] For Observable Framework (with `curl` and `ca-certificates` already available)
-# RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-#     && apt-get install -y \
-#     gnupg \
-#     nodejs \
-#     ## Final clean
-#     && apt-get clean \
-#     && rm -rf /var/lib/apt/lists/*
+# # [OJS] For Observable Framework (with `curl` and `ca-certificates` already available)
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y \
+    gnupg \
+    nodejs \
+    ## Final clean
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# # [OJS] Verify Node.js and NPM installation
-# RUN node -v && npm -v
+# [OJS] Verify Node.js and NPM installation
+RUN node -v && npm -v
 
 # # [OJS] Install Observable CLI globally
 # RUN npm install -g @observablehq/framework
