@@ -22,11 +22,17 @@ format:
         height: 900 # See [Presentation Size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
         theme: [serif,custom.scss] # Please refer https://quarto.org/docs/presentations/revealjs/#themes
         # logo: Fig_logo_bar_ncu.png
-        preview-links: auto # Allow preview links in presenting mode
         slide-number: true
         toc: true
         toc-title: Outline # Title for TOC
         toc-depth: 3
+        # Behaviors
+        preview-links: auto # Allow preview links in presenting mode
+        navigation-mode: linear # "vertical" is interesting but not suitable for most cases.
+        controls: true # Show arrow controls for navigating through slides.
+        progress: true # Show minimal progress bar
+        touch: false # For touch device
+        scroll-view: false # Revealjs' new feature. It looks fresh at the first time but annoying for complex slide when there are scrollable pages or code blocks.
         # parallax-background-image: background.png
         parallax-background-image: https://raw.githubusercontent.com/okatsn/QuartoTemplates/main/tree-slide/background.png
         parallax-background-size: "1920px 1200px"
