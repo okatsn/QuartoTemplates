@@ -132,3 +132,95 @@ Code:
 ```
 
 - Hello, this (![](non-existing.png){.inlineimg}) is an inline image.
+
+
+# Other Quarto Basics
+
+## Speaker note, Admonition and Footnote
+
+::: {.notes}
+This is a speaker note.
+:::
+
+::: {.callout-tip}
+Callout supports either `tip|note|caution|warning|important`
+:::
+
+::: aside
+Footnote title here (Use `^[This is a footnote]` syntax to add entry)
+:::
+
+## Columns
+
+::: {.column-margin}
+Put contents to be displayed on the side here.
+:::
+
+::::{.columns}::::
+:::{.column width='50%'}
+Two-columns layout is useful.
+
+- A-1
+- A-2
+:::
+
+:::{.column width='50%'}
+Especially useful for demonstrating parallel concepts.
+
+- B-1
+- B-2
+:::
+::::
+
+## Dealing with overflow {.scrollable}
+
+This is a scrollable page, with a scrollable container.
+Typically it is not a good idea to show a scrollable container in a scrollable page; this makes presenter struggle to scroll the correct target.
+
+### Scrollable container
+::: {.scroll-container style="overflow-y: scroll; height: 800px;"}
+This is a scrollable container.
+![](background.png){width="1920px" fig-align="center"}
+:::
+
+## Dealing with overflow {.unlisted}
+
+Decision logic:
+
+- When Contents overflow:
+  1. Create a new slide with the same title with `{.unlisted}` (to not show repeat entries in TOC).
+  2. If 1. is not applicable (e.g., image itself overflow):
+     - Use `{.scrollable}` on a single page. This way the **Slide Heading** (`## <Slide Heading>`) is not persistent on scroll.
+     - When one needs the slide heading or some content on the top persist on scrolling, use [Scrollable container](#scrollable-container).
+
+
+## Highlight in background at arbitrary position {auto-animate=true}
+
+::: {data-id="box1" .custom-box style="--left: 200px; --top: 100px; --width: 250px; --height: 70px; --background-color: #2780e3; --radius: 20px;"}
+:::
+
+- Create a `.custom-box` to highlight contents from the background at arbitrary position.
+
+
+## Highlight in background at arbitrary position {auto-animate=true}
+
+::: {data-id="box1" .custom-box style="--left: 280px; --top: 230px; --width: 360px; --height: 70px; --background-color: #2780e3; --radius: 20px;"}
+:::
+
+
+- Create a `.custom-box` to highlight contents from the background at arbitrary position.
+- While this is visually appealing, don't overuse it because it makes the slide hard to maintain.
+
+
+## IFrame
+
+Use IFrame to embedd an external page.
+
+<iframe width="780" height="500" src="https://quarto.org/" title="Quarto Documentation"></iframe>
+
+## Place image or Text at absolute position
+
+![](background.png){.absolute top=100 right=100 width="800px"}
+
+[Hi Mom I'm here!]{style="float:right;text-align:right;"}
+
