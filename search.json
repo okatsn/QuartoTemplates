@@ -7,56 +7,6 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\nFor how this project be created, see: https://quarto.org/docs/websites/#quick-start"
   },
   {
-    "objectID": "Guide.html",
-    "href": "Guide.html",
-    "title": "Use Templates",
-    "section": "",
-    "text": "Documentation\n\n\n\n\n\n\nBy executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
-    "crumbs": [
-      "Home",
-      "Use Templates"
-    ]
-  },
-  {
-    "objectID": "Guide.html#template-tree-slide",
-    "href": "Guide.html#template-tree-slide",
-    "title": "Use Templates",
-    "section": "",
-    "text": "By executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
-    "crumbs": [
-      "Home",
-      "Use Templates"
-    ]
-  },
-  {
-    "objectID": "others/website-how.html",
-    "href": "others/website-how.html",
-    "title": "How this website be built",
-    "section": "",
-    "text": "See https://quarto.org/docs/websites/\n\n\nQuick Start\n\n\n\n\n\ncd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built\n\n\n⚠️ If you encounter slides/* file-not–fonud error in local rendering, manually run . docs/cpfiles.sh and render again.\n\n\n\n\n\nReferring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
-  },
-  {
-    "objectID": "others/website-how.html#create",
-    "href": "others/website-how.html#create",
-    "title": "How this website be built",
-    "section": "",
-    "text": "Quick Start"
-  },
-  {
-    "objectID": "others/website-how.html#render",
-    "href": "others/website-how.html#render",
-    "title": "How this website be built",
-    "section": "",
-    "text": "cd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built\n\n\n⚠️ If you encounter slides/* file-not–fonud error in local rendering, manually run . docs/cpfiles.sh and render again."
-  },
-  {
-    "objectID": "others/website-how.html#publish",
-    "href": "others/website-how.html#publish",
-    "title": "How this website be built",
-    "section": "",
-    "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
-  },
-  {
     "objectID": "others/about.html",
     "href": "others/about.html",
     "title": "About",
@@ -115,5 +65,111 @@
     "title": "README",
     "section": "",
     "text": "rtag, ltag and nftag\nCode:\n- Hello World [a no-floating tag]{.nftag fragment-index=1 .fragment}\n- Hello World [a align-right tag]{.rtag fragment-index=2 .fragment}\n- Hello World [a align-left tag]{.ltag fragment-index=3 .fragment}\n\nHello World a no-floating tag\nHello World a align-right tag\nHello World a align-left tag\n\nInline image\nCode:\n- Hello, this (![](non-existing.png){.inlineimg}) is an inline image.\n\nHello, this () is an inline image."
+  },
+  {
+    "objectID": "slides/tree-slide.html#speaker-note-admonition-and-footnote",
+    "href": "slides/tree-slide.html#speaker-note-admonition-and-footnote",
+    "title": "README",
+    "section": "Speaker note, Admonition and Footnote",
+    "text": "Speaker note, Admonition and Footnote\n\nThis is a speaker note.\n\n\n\n\n\n\n\nTip\n\n\nCallout supports either tip|note|caution|warning|important\n\n\n\n\n\nFootnote title here (Use ^[This is a footnote] syntax to add entry)"
+  },
+  {
+    "objectID": "slides/tree-slide.html#columns",
+    "href": "slides/tree-slide.html#columns",
+    "title": "README",
+    "section": "Columns",
+    "text": "Columns\n\nPut contents to be displayed on the side here.\n\n\n\nTwo-columns layout is useful.\n\nA-1\nA-2\n\n\nEspecially useful for demonstrating parallel concepts.\n\nB-1\nB-2"
+  },
+  {
+    "objectID": "slides/tree-slide.html#dealing-with-overflow",
+    "href": "slides/tree-slide.html#dealing-with-overflow",
+    "title": "README",
+    "section": "Dealing with overflow",
+    "text": "Dealing with overflow\nThis is a scrollable page, with a scrollable container. Typically it is not a good idea to show a scrollable container in a scrollable page; this makes presenter struggle to scroll the correct target.\nScrollable container\n\nThis is a scrollable container."
+  },
+  {
+    "objectID": "slides/tree-slide.html#dealing-with-overflow-1",
+    "href": "slides/tree-slide.html#dealing-with-overflow-1",
+    "title": "README",
+    "section": "Dealing with overflow",
+    "text": "Dealing with overflow\nDecision logic:\n\nWhen Contents overflow:\n\nCreate a new slide with the same title with {.unlisted} (to not show repeat entries in TOC).\nIf 1. is not applicable (e.g., image itself overflow):\n\nUse {.scrollable} on a single page. This way the Slide Heading (## &lt;Slide Heading&gt;) is not persistent on scroll.\nWhen one needs the slide heading or some content on the top persist on scrolling, use Scrollable container."
+  },
+  {
+    "objectID": "slides/tree-slide.html#highlight-in-background-at-arbitrary-position",
+    "href": "slides/tree-slide.html#highlight-in-background-at-arbitrary-position",
+    "title": "README",
+    "section": "Highlight in background at arbitrary position",
+    "text": "Highlight in background at arbitrary position\n\n\n\n\nCreate a .custom-box to highlight contents from the background at arbitrary position."
+  },
+  {
+    "objectID": "slides/tree-slide.html#highlight-in-background-at-arbitrary-position-1",
+    "href": "slides/tree-slide.html#highlight-in-background-at-arbitrary-position-1",
+    "title": "README",
+    "section": "Highlight in background at arbitrary position",
+    "text": "Highlight in background at arbitrary position\n\n\n\n\nCreate a .custom-box to highlight contents from the background at arbitrary position.\nWhile this is visually appealing, don’t overuse it because it makes the slide hard to maintain."
+  },
+  {
+    "objectID": "slides/tree-slide.html#iframe",
+    "href": "slides/tree-slide.html#iframe",
+    "title": "README",
+    "section": "IFrame",
+    "text": "IFrame\nUse IFrame to embedd an external page."
+  },
+  {
+    "objectID": "slides/tree-slide.html#place-image-or-text-at-absolute-position",
+    "href": "slides/tree-slide.html#place-image-or-text-at-absolute-position",
+    "title": "README",
+    "section": "Place image or Text at absolute position",
+    "text": "Place image or Text at absolute position\n\nHi Mom I’m here!"
+  },
+  {
+    "objectID": "others/website-how.html",
+    "href": "others/website-how.html",
+    "title": "How this website be built",
+    "section": "",
+    "text": "See https://quarto.org/docs/websites/\n\n\nQuick Start\n\n\n\n\n\ncd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built\n\n\n⚠️ If you encounter slides/* file-not–fonud error in local rendering, manually run . docs/cpfiles.sh and render again.\n\n\n\n\n\nReferring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
+  },
+  {
+    "objectID": "others/website-how.html#create",
+    "href": "others/website-how.html#create",
+    "title": "How this website be built",
+    "section": "",
+    "text": "Quick Start"
+  },
+  {
+    "objectID": "others/website-how.html#render",
+    "href": "others/website-how.html#render",
+    "title": "How this website be built",
+    "section": "",
+    "text": "cd docs\nquarto render --cache-refresh\nSee also:\n\n.vscode/settings.json for livePreview settings\nhttps://quarto.org/docs/websites/#config-file for setting up _quarto.yml\nhttps://quarto.org/docs/websites/website-tools.html for Website tools\nhttps://github.com/quarto-dev/quarto-web for the source code of how Quarto’s official website be built\n\n\n⚠️ If you encounter slides/* file-not–fonud error in local rendering, manually run . docs/cpfiles.sh and render again."
+  },
+  {
+    "objectID": "others/website-how.html#publish",
+    "href": "others/website-how.html#publish",
+    "title": "How this website be built",
+    "section": "",
+    "text": "Referring: https://quarto.org/docs/publishing/github-pages.html#publish-action\n\n\nIn bash,\ncd docs\nquarto publish gh-pages\n\nThis creates a new branch gh-pages, render files and publish them to e.g., https://okatsn.github.io/QuartoTemplates/\nNoted that you have to go to the Github Settings =&gt; Pages =&gt; Deploy from a branch and Save.\n\n\n\n\nSee .github/workflows/deploy.yml."
+  },
+  {
+    "objectID": "Guide.html",
+    "href": "Guide.html",
+    "title": "Use Templates",
+    "section": "",
+    "text": "Documentation\n\n\n\n\n\n\nBy executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
+    "crumbs": [
+      "Home",
+      "Use Templates"
+    ]
+  },
+  {
+    "objectID": "Guide.html#template-tree-slide",
+    "href": "Guide.html#template-tree-slide",
+    "title": "Use Templates",
+    "section": "",
+    "text": "By executing tree-slide.sh, you can create a new index.qmd file with all dependent files copied to the target directory; the scripts is intended to create a new presentation of tree-slide in the directory of ../HelloWorld at one click.\nThe script tree-slide.sh generates index.qmd files and others by calling tree-slide/render.js to render the mustache files therein with ./tree-slide/data.json, and copy them to ../HelloWorld, where your personal information should be set in tree-slide/data.json.\n\n\nClone QuartoTemplates to the directory of your projects:\ngit clone https://github.com/okatsn/QuartoTemplates.git\nModify data.json, and\ncd QuartoTemplates\n. tree-slide.sh HelloWorld\n\n\n\n\nAlternatively, you can render file directly in ./tree-slide.\ncd tree-slide\nnode render.js",
+    "crumbs": [
+      "Home",
+      "Use Templates"
+    ]
   }
 ]

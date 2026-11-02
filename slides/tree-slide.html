@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-17888a1159294d3eb470f19f6f52f5a5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.20">
 
   <meta name="dcterms.date" content="2024-09-23">
   <title>QuartoTemplates – README</title>
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -223,6 +226,19 @@
 <li><a href="#/inline-image" id="/toc-inline-image">Inline image</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#/convention-and-paradigm" id="/toc-convention-and-paradigm">Convention and Paradigm</a>
+<ul>
+<li><a href="#/speaker-note-admonition-and-footnote" id="/toc-speaker-note-admonition-and-footnote">Speaker note, Admonition and Footnote</a></li>
+<li><a href="#/columns" id="/toc-columns">Columns</a></li>
+<li><a href="#/dealing-with-overflow" id="/toc-dealing-with-overflow">Dealing with overflow</a>
+<ul>
+<li><a href="#/scrollable-container" id="/toc-scrollable-container">Scrollable container</a></li>
+</ul></li>
+<li><a href="#/highlight-in-background-at-arbitrary-position" id="/toc-highlight-in-background-at-arbitrary-position">Highlight in background at arbitrary position</a></li>
+<li><a href="#/highlight-in-background-at-arbitrary-position-1" id="/toc-highlight-in-background-at-arbitrary-position-1">Highlight in background at arbitrary position</a></li>
+<li><a href="#/iframe" id="/toc-iframe">IFrame</a></li>
+<li><a href="#/place-image-or-text-at-absolute-position" id="/toc-place-image-or-text-at-absolute-position">Place image or Text at absolute position</a></li>
+</ul></li>
 </ul>
 </nav>
 </section>
@@ -243,18 +259,18 @@
 <li><span class="fragment highlight-steelblue" data-fragment-index="3">steel blue</span>.</li>
 </ul>
 <p>Code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-forestgreen"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>forest green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
-<span id="cb1-2"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-indianred"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
-<span id="cb1-3"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-steelblue"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">3</span><span class="dt">&gt;</span>steel blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a aria-label="1"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-forestgreen"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>forest green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
+<span id="cb1-2"><a aria-label="2"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-indianred"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
+<span id="cb1-3"><a aria-label="3"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-steelblue"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">3</span><span class="dt">&gt;</span>steel blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Noted that, class <code>fragment-</code> with <code>highlight-forestgreen</code>, <code>highlight-indianred</code>, <code>highlight-steelblue</code> also highlight the fragment of current index with font-weight <code>bold</code>.</p>
 </section>
 <section id="highlight-current" class="slide level2">
 <h2><code>highlight-current</code></h2>
 <p>Similar to the use of <code>highlight</code>, but the effects will disappear if next fragment index is triggered.</p>
 <p>Code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-forestgreen"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>forest green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
-<span id="cb2-2"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-indianred"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
-<span id="cb2-3"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-steelblue"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">3</span><span class="dt">&gt;</span>steel blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a aria-label="1"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-forestgreen"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>forest green<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
+<span id="cb2-2"><a aria-label="2"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-indianred"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
+<span id="cb2-3"><a aria-label="3"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-steelblue"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">3</span><span class="dt">&gt;</span>steel blue<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output:</p>
 <ul>
 <li><span class="fragment highlight-current-forestgreen" data-fragment-index="1">forest green</span>,</li>
@@ -266,9 +282,9 @@
 <h2><code>highlight-bold</code> and <code>highlight-current-bold</code></h2>
 <p>When using <code>highlight-bold</code> and <code>highlight-current-bold</code> the original color is inherited. Both of them highlights the text with bold and slight shading.</p>
 <p>Code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>bold (current)<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
-<span id="cb3-2"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>bold (persistent)indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
-<span id="cb3-3"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>bold (current)<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a aria-label="1"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>bold (current)<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>,</span>
+<span id="cb3-2"><a aria-label="2"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">2</span><span class="dt">&gt;</span>bold (persistent)indian red<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span>, and</span>
+<span id="cb3-3"><a aria-label="3"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment highlight-current-bold"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>bold (current)<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><span class="fragment highlight-current-bold" data-fragment-index="1">bold (current)</span>,</li>
 <li><span class="fragment highlight-bold" data-fragment-index="2">bold (persistent)</span>, and</li>
@@ -279,7 +295,7 @@
 <h2><code>blur</code></h2>
 <p>Blur the text in the beginning, and then unveil it.</p>
 <p>Code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment blur"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>Blurred text.<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource html number-lines code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a aria-label="1"></a>- <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"fragment blur"</span><span class="ot"> fragment-index</span><span class="op">=</span><span class="st">1</span><span class="dt">&gt;</span>Blurred text.<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><span class="fragment blur" data-fragment-index="1">Blurred text.</span></li>
 </ul>
@@ -307,6 +323,116 @@
 <ul>
 <li>Hello, this (<img data-src="non-existing.png" class="inlineimg">) is an inline image.</li>
 </ul>
+</section></section>
+<section>
+<section id="convention-and-paradigm" class="title-slide slide level1 center">
+<h1>Convention and Paradigm</h1>
+
+</section>
+<section id="speaker-note-admonition-and-footnote" class="slide level2">
+<h2>Speaker note, Admonition and Footnote</h2>
+<aside class="notes">
+<p>This is a speaker note.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Callout supports either <code>tip|note|caution|warning|important</code></p>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Footnote title here (Use <code>^[This is a footnote]</code> syntax to add entry)</p>
+</div></aside></section>
+<section id="columns" class="slide level2">
+<h2>Columns</h2>
+<div class="column-margin">
+<p>Put contents to be displayed on the side here.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Two-columns layout is useful.</p>
+<ul>
+<li>A-1</li>
+<li>A-2</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>Especially useful for demonstrating parallel concepts.</p>
+<ul>
+<li>B-1</li>
+<li>B-2</li>
+</ul>
+</div></div>
+</section>
+<section id="dealing-with-overflow" class="slide level2 scrollable">
+<h2>Dealing with overflow</h2>
+<p>This is a scrollable page, with a scrollable container. Typically it is not a good idea to show a scrollable container in a scrollable page; this makes presenter struggle to scroll the correct target.</p>
+<h3 id="scrollable-container">Scrollable container</h3>
+<div class="scroll-container" style="overflow-y: scroll; height: 800px;">
+<p>This is a scrollable container. <img data-src="background.png" class="quarto-figure quarto-figure-center" width="1920"></p>
+</div>
+</section>
+<section id="dealing-with-overflow-1" class="slide level2 unlisted">
+<h2>Dealing with overflow</h2>
+<p>Decision logic:</p>
+<ul>
+<li>When Contents overflow:
+<ol type="1">
+<li>Create a new slide with the same title with <code>{.unlisted}</code> (to not show repeat entries in TOC).</li>
+<li>If 1. is not applicable (e.g., image itself overflow):
+<ul>
+<li>Use <code>{.scrollable}</code> on a single page. This way the <strong>Slide Heading</strong> (<code>## &lt;Slide Heading&gt;</code>) is not persistent on scroll.</li>
+<li>When one needs the slide heading or some content on the top persist on scrolling, use <a href="#/scrollable-container">Scrollable container</a>.</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="highlight-in-background-at-arbitrary-position" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Highlight in background at arbitrary position</h2>
+<div class="custom-box" data-id="box1" style="--left: 200px; --top: 100px; --width: 250px; --height: 70px; --background-color: #2780e3; --radius: 20px;">
+
+</div>
+<ul>
+<li>Create a <code>.custom-box</code> to highlight contents from the background at arbitrary position.</li>
+</ul>
+</section>
+<section id="highlight-in-background-at-arbitrary-position-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Highlight in background at arbitrary position</h2>
+<div class="custom-box" data-id="box1" style="--left: 280px; --top: 230px; --width: 360px; --height: 70px; --background-color: #2780e3; --radius: 20px;">
+
+</div>
+<ul>
+<li>Create a <code>.custom-box</code> to highlight contents from the background at arbitrary position.</li>
+<li>While this is visually appealing, don’t overuse it because it makes the slide hard to maintain.</li>
+</ul>
+</section>
+<section id="iframe" class="slide level2">
+<h2>IFrame</h2>
+<p>Use IFrame to embedd an external page.</p>
+<iframe width="780" height="500" src="https://quarto.org/" title="Quarto Documentation">
+</iframe>
+</section>
+<section id="place-image-or-text-at-absolute-position" class="slide level2">
+<h2>Place image or Text at absolute position</h2>
+<p><img data-src="background.png" class="absolute" style="top: 100px; right: 100px; width: 800px; "></p>
+<p><span style="float:right;text-align:right;">Hi Mom I’m here!</span></p>
 
 
 </section></section>
