@@ -134,7 +134,7 @@ Code:
 - Hello, this (![](non-existing.png){.inlineimg}) is an inline image.
 
 
-# Other Quarto Basics
+# Convention and Paradigm
 
 ## Speaker note, Admonition and Footnote
 
