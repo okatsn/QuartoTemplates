@@ -34,7 +34,6 @@ format:
 
 ## `highlight` and `highlight-current`
 
-## `highlight`
 
 Despite the default
 <span class="fragment highlight-green" data-fragment-index="1">green</span>,
