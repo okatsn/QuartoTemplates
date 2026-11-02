@@ -1,13 +1,6 @@
-FROM okatsn/my-quarto-build:latest AS build-quarto
-FROM okatsn/my-jupyter-with-julia:v2026c
-
+FROM okatsn/my-jupyter-with-julia:v2026e
 
 USER root
-
-# COPY the main application
-COPY --from=build-quarto --chown=$NB_UID:$NB_GID /opt/quarto /opt/quarto
-# Making the application located at `/opt/quarto/bin/quarto` accessible from anywhere on your system by simply using the command `quarto`.
-RUN ln -fs /opt/quarto/bin/quarto /usr/local/bin/quarto
 
 RUN apt-get update && \
     apt-get -y install \
@@ -22,22 +15,28 @@ RUN apt-get update && \
     # fonts-noto-cjk \
     # fonts-noto-cjk-extra \
     # fonts-noto-color-emoji \
-    # Copilot sandboxing
+    # # Copilot sandboxing
     bubblewrap \
     socat \
-    # PDF utilities
+    # For coiplot sandboxing to work. Also read [MyVSCodeSettings/init_ubuntu/README.md](https://github.com/okatsn/MyVSCodeSettings/blob/main/init_ubuntu/README.md):
+    slirp4netns \
+    iptables \
+    uidmap \
+    # # PDF utilities
     ghostscript \
     # # git-crypt
     # git-crypt \
     # gnupg \
-    # Final clean
-    ## For Claude `docx` skill (okatsn/claude-skills)
+    # # For Claude `docx` skill (okatsn/claude-skills)
     # libreoffice \
     # poppler-utils \
-    ## Final clean
+    # # Final clean
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && fc-cache -f -v
+
+# # For pdf to docx converting skills
+# RUN pip install pdf2docx
 
 
 # # [OJS] For Observable Framework (with `curl` and `ca-certificates` already available)
@@ -49,21 +48,23 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# [OJS] Verify Node.js and NPM installation
+# # [OJS] Verify Node.js and NPM installation
 RUN node -v && npm -v
 
 # # [OJS] Install Observable CLI globally
 # RUN npm install -g @observablehq/framework
 
-# ## For Claude `docx` skill: install docx JS library for creating new Word documents
-# RUN apt update && apt install -y \
+# # For Claude `docx` skill: install docx JS library for creating new Word documents
+# RUN apt-get update && apt-get install -y --no-install-recommends \
 #     ## Why npm is required:
 #     # 1. For `npx degit`; it costs around 366 MB.
 #     # 2. npm is required for `npm install -g docx` (docx skill: creating new Word documents)
+#     # NOTE: Install nodejs with nodesource setup script in the previous [OJS] block automatically has npm installed
 #     npm \
 #     # Install imagemagick that allows png-jpg conversion
 #     # - Rotate image in-place: `mogrify -rotate 90 sancen-1-photo-4.png`
-#     imagemagick
+#     imagemagick \
+#     && rm -rf /var/lib/apt/lists/*
 
 # # Make globally installed npm packages resolvable via require()
 # ENV NODE_PATH=/usr/local/lib/node_modules
@@ -91,6 +92,16 @@ RUN node -v && npm -v
 #     && tar -xzf /tmp/tectonic.tar.gz -C /usr/local/bin \
 #     && chmod +x /usr/local/bin/tectonic \
 #     && rm /tmp/tectonic.tar.gz
+
+# # Install JQ
+# RUN sudo apt update && sudo apt install -y jq
+
+# Prepare ~/.copilot for the non-root user. The named volume mounted there copies this ownership on first creation (an existing volume keeps its old ownership), and the bind-mount targets are created inside it.
+# NOTE: `jovyan` is the user in the base image.
+RUN install -d -m 0700 -o jovyan -g "$(id -gn jovyan)" /home/jovyan/.copilot \
+    && install -d -m 0755 -o jovyan -g "$(id -gn jovyan)" \
+    /home/jovyan/.copilot/agents \
+    /home/jovyan/.copilot/instructions
 
 USER $NB_USER
 
