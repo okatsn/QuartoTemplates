@@ -29,14 +29,7 @@
     "href": "slides/tree-slide.html#highlight-and-highlight-current",
     "title": "README",
     "section": "highlight and highlight-current",
-    "text": "highlight and highlight-current"
-  },
-  {
-    "objectID": "slides/tree-slide.html#highlight",
-    "href": "slides/tree-slide.html#highlight",
-    "title": "README",
-    "section": "highlight",
-    "text": "highlight\nDespite the default green, red, and blue, there are three colors available for this template:\n\nforest green,\nindian red, and\nsteel blue.\n\nCode:\n- &lt;span class=\"fragment highlight-forestgreen\" data-fragment-index=\"1\"&gt;forest green&lt;/span&gt;,\n- &lt;span class=\"fragment highlight-indianred\" data-fragment-index=\"2\"&gt;indian red&lt;/span&gt;, and\n- &lt;span class=\"fragment highlight-steelblue\" data-fragment-index=\"3\"&gt;steel blue&lt;/span&gt;.\nNoted that, class fragment- with highlight-forestgreen, highlight-indianred, highlight-steelblue also highlight the fragment of current index with font-weight bold."
+    "text": "highlight and highlight-current\nDespite the default green, red, and blue, there are three colors available for this template:\n\nforest green,\nindian red, and\nsteel blue.\n\nCode:\n- &lt;span class=\"fragment highlight-forestgreen\" data-fragment-index=\"1\"&gt;forest green&lt;/span&gt;,\n- &lt;span class=\"fragment highlight-indianred\" data-fragment-index=\"2\"&gt;indian red&lt;/span&gt;, and\n- &lt;span class=\"fragment highlight-steelblue\" data-fragment-index=\"3\"&gt;steel blue&lt;/span&gt;.\nNoted that, class fragment- with highlight-forestgreen, highlight-indianred, highlight-steelblue also highlight the fragment of current index with font-weight bold."
   },
   {
     "objectID": "slides/tree-slide.html#highlight-current",
