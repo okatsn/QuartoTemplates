@@ -17,7 +17,9 @@ $presentation-heading-color: #383d3d !default;
 
 /*-- scss:rules --*/
 
-// set code larger
+/*-- scss:defaults --*/
+
+$code-block-font-size: 0.8em; // Controls all <pre><code> blocks (default is 0.55em). This override below `code` and `code.sourceCode` font size
 
 
 // Plain-text code (no language specified)
