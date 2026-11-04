@@ -40,7 +40,7 @@ code.sourceCode {
 // Math
 // See https://github.com/quarto-dev/quarto-cli/discussions/2392#discussioncomment-3614052
 
-// Inline math 
+// Inline math
 .math.inline {
     font-size: 100% !important;
 }
@@ -68,7 +68,7 @@ blockquote {
 //     padding-right: 20px;
 //     /* Add padding to avoid text cutting off on the right */
 // }
-// 
+//
 /* Custom CSS for scrollable TOC */
 // section#TOC {
 //     max-height: 100vh;
@@ -287,7 +287,7 @@ p.subtitle {
 // - DarkCyan #008B8B // Tag that floats to the right
 // - FireBrick #B22222
 //
-// KEYNOTE: 
+// KEYNOTE:
 // - Tag will attach to the succeeding element, even when there are line breaks.
 //   If you want the tag appear alone in one line, use an empty character
 //   Unicode Character “⠀” (U+2800)
@@ -378,7 +378,7 @@ p.subtitle {
     opacity: 1 !important;
     visibility: visible !important;
     /* Default highlight color if not specified */
-    --bg-color: rgba(255, 255, 0, 0.5);
+    --bg-color: rgba(0, 255, 247, 0.5);
 }
 
 
@@ -422,7 +422,7 @@ p.subtitle {
     opacity: 1 !important;
     visibility: visible !important;
     /* Default highlight color if not specified */
-    --bg-color: rgba(255, 255, 0, 0.5);
+    --bg-color: rgba(0, 255, 247, 0.5);
 }
 
 /* Initially hide the highlight background */
@@ -434,7 +434,7 @@ p.subtitle {
     transform: translate(-8%, -0px);
     /* Use the custom variable for background color */
     background-color: var(--bg-color);
-    border: 0px solid rgba(255, 255, 0, 0.9);
+    border: 0px solid rgba(0, 255, 247, 0.5);
     padding-top: 0px;
     padding-right: 6px;
     padding-bottom: 0px;
