@@ -1,5 +1,6 @@
 /*-- scss:defaults --*/
 
+// Quarto compiler expect only one scss:defaults
 // $body-bg: #d6ffa448;
 // $body-color: #fff;
 $link-color: #186949;
@@ -15,12 +16,9 @@ $presentation-heading-font: "Noto Serif CJK TC Black", "Noto Serif TC Black",
 $presentation-heading-color: #383d3d !default;
 // !default means these settings can be overridden.
 
-/*-- scss:rules --*/
-
-/*-- scss:defaults --*/
-
 $code-block-font-size: 0.8em; // Controls all <pre><code> blocks (default is 0.55em). This override below `code` and `code.sourceCode` font size
 
+/*-- scss:rules --*/
 
 // Plain-text code (no language specified)
 code {
